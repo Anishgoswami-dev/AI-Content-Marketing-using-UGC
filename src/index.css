@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-midnight: #17162A;
+    --color-violet: #7657F6;
+    --color-coral: #FF6B6B;
+    --color-offwhite: #F8F7FC;
+    --color-surface-violet: #EEE9FF;
+    --color-text-primary: #202033;
+    --color-text-muted: #77758A;
+    --color-border: #E8E5F0;
+  }
+
+  body {
+    background-color: var(--color-offwhite);
+    color: var(--color-text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1EFF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5D1E5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7657F6;
+}
+
+/* Glassmorphism & utilities */
+.glass-nav {
+  background: rgba(248, 247, 252, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(232, 229, 240, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid #E8E5F0;
+}
+
+.badge-violet {
+  background-color: #EEE9FF;
+  color: #7657F6;
+  border: 1px solid rgba(118, 87, 246, 0.2);
+}
+
+.badge-coral {
+  background-color: #FFF0F0;
+  color: #FF6B6B;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.gradient-text-hero {
+  background: linear-gradient(135deg, #17162A 20%, #7657F6 70%, #FF6B6B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg-hero {
+  background: radial-gradient(circle at 10% 20%, rgba(118, 87, 246, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(255, 107, 107, 0.06) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(238, 233, 255, 0.5) 0%, transparent 70%);
+}
